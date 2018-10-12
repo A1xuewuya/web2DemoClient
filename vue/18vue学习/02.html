@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="Description" content="" />
+		<title>demo1</title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	</head>
+
+	<body class="container">
+		<div id="app" class="row">
+			<div class="col-md-6">
+				<table class="table table-bordered">
+					<tr>
+						<th>index</th>
+						<th>title</th>
+						<th>desc</th>
+						<th></th>
+					</tr>
+					<tr v-for="(item, index) in todoList">
+						<td>{{ index }}</td>
+						<td>{{ item.title }}</td>
+						<td>{{ item.desc }}</td>
+						<td>
+							<input type="button" class="btn btn-danger" value="remove" @click="remove(index)" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-6">
+				<div class="form-inline">
+					<label for="title" class="control-label col-md-4">title:</label>
+					<input type="text" v-model="title" class="form-control col-md-8" />
+				</div>
+				<div class="form-inline">
+					<label for="desc" class="control-label col-md-4">desc:</label>
+					<input type="text" v-model="desc" class="form-control col-md-8" />
+				</div>
+				<div class="form-inline">
+					<input type="button" class="btn btn-primary offset-md-10" name="" id="" value="ok" v-on:click="addItem()" />
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.bootcss.com/vue/2.4.1/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var TodoItem = function(title, desc) {
+				this.title = title;
+				this.desc = desc;
+			};
+
+			new Vue({
+				el: "#app",
+				data: {
+					todoList: [],
+					todoItem: {
+						id: '',
+						title: '',
+						desc: ''
+					}
+				},
+				methods: {
+					addItem: function() {
+						this.todoList.push(new TodoItem(this.title, this.desc));
+						this.title = this.desc = '';
+						console.log(JSON.stringify(this.todoList));
+					},
+					remove: function(index) {
+						this.todoList.splice(index, 1);
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="app">
+			{{ message }}
+		</div>
+
+		<div id="app-2">
+			<!--指令-->
+			<span v-bind:title="message">
+			鼠标悬停几秒钟查看此处动态绑定的提示信息
+		</span>
+		</div>
+
+		<div id="app-3">
+			<p v-if="seen">现在可以看见我了</p>
+		</div>
+
+		<div id="app-4">
+			<ol>
+				<li v-for="todo in todos">
+					{{ todo.text }}
+				</li>
+			</ol>
+		</div>
+
+		<div id="app-5">
+			<p>{{message}}</p>
+			<button v-on:click="reverseMessage">逆转消息</button>
+		</div>
+
+		<div id="app-6">
+			<p>{{message}}</p>
+			<input type="text" v-model="message" />
+		</div>
+
+		<br />
+		<br />
+
+		<div id="app-7">
+			<h2>案例demo</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Sex</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="person in people">
+						<td>{{ person.name }}</td>
+						<td>{{ person.age }}</td>
+						<td>{{ person.sex }}</td>
+						<td :class="'text-center'"><button @click="deletePerson($index)">Delete</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

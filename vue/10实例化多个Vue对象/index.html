@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+
+	<body>
+		<div id="app1">
+			<h1>{{ title }}</h1>
+			<p>{{ greet }}</p>
+		</div>
+
+		<div id="app2">
+			<h1>{{ title }}</h1>
+			<p>{{ greet }}</p>
+			<button v-on:click="changeTitle">改变app1题目</button>
+		</div>
+
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

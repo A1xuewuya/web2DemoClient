@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="app">
+			<button v-on:click="error = !error">Toggle error</button>
+			<button v-on:click="success = !success ">Toggle success</button>
+
+			<!--<p v-if="error">网络连接错误 404</p>
+			<p v-else-if="success">网络连接成功 200 </p>-->
+			<p v-show="error">网络连接错误 404</p>
+			<p v-show="success">网络连接成功 200 </p>
+		</div>
+
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

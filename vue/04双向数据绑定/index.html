@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="vue-app">
+			<h1>双向数据绑定 input /select / textarea</h1>
+			<label>Name:</label>
+			<input ref="name" type="text" v-on:keyup="logName" />
+			<span>{{ name }}</span>
+			<label>Age:</label>
+			<input ref="age" type="text" v-on:keyup="logAge" />
+			<span>{{ age }}</span>
+		</div>
+
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="vue-app">
+			<h1>计算属性</h1>
+			<button v-on:click="a++">add to a</button>
+			<button v-on:click="b++">add to b</button>
+			<p>{{ a }}</p>
+			<p>{{ b }}</p>
+			<p>age + a = {{ addToA }}</p>
+			<p>age + b = {{ addToB }}</p>
+		</div>
+
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

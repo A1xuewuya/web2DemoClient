@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue</title>
+	</head>
+
+	<body>
+		<!--绑定元素属性 放在根容器中-->
+		<div id="app-a">
+			<p>{{ con }}</p>
+			<p> {{ job }}</p>
+
+			<p>{{ greet("下午") }}</p>
+
+			<!--属性绑定-->
+			<a v-bind:href="website">百度链接</a>
+			<input type="" name="" id="" v-bind:value="website" />
+			<p v-html="websiteTag"></p>
+		</div>
+
+		<!--绑定方法-->
+		<div id="app-b">
+
+		</div>
+
+		<script src="./vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

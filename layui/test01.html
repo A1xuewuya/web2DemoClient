@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="layui-v2.4.3/css/layui.css" />
+	</head>
+
+	<body>
+		<span class="layui-badge-dot"></span>
+		<span class="layui-badge-dot layui-bg-orange"></span>
+		<span class="layui-badge-dot layui-bg-green"></span>
+		<span class="layui-badge-dot layui-bg-cyan"></span>
+		<span class="layui-badge-dot layui-bg-blue"></span>
+		<span class="layui-badge-dot layui-bg-black"></span>
+		<span class="layui-badge-dot layui-bg-gray"></span>
+		<button class="layui-btn">一个标准的按钮</button>
+		<a href="http://www.layui.com" class="layui-btn">一个可跳转的按钮</a>
+
+		<script src="layui-v2.4.3/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			layui.config({
+				base: '/web2DemoClient/layui/js/modules/', //你存放新模块的目录，注意，不是layui的模块目录
+				version: false,
+				debug: true,
+
+			}).use('test01'); //加载入口
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="user in users">
+					{{user}}
+				</li>
+			</ul>
+
+			<ul>
+				<!--<li v-for="(group, index) in groups">
+					{{index}}===={{group.name}} ===== {{group.age}}
+				</li>-->
+				<li v-for="group in groups">
+					<p v-for="(item, index) in group">
+						{{index}}  ==== {{item}}
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

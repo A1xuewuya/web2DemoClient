@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div id="vue-app">
+			<h1>Events</h1>
+			<!--<button v-on:click="age++">加1</button>
+			<button v-on:click="age--">减1</button>-->
+			<button v-bind:click="add(1)">加1</button>
+			<button @click="subtract(1)">减1</button>
+			<button v-on:dblclick.once="add(10)">双加10</button>
+			<button v-on:dblclick="subtract(10)">双减10</button>
+			<p>My age is {{ age }}</p>
+
+			<div id="canves" v-on:mousemove="updateXY">
+				{{ x }}, {{ y }} - <span v-on:mousemove.stop="">Stop Moving</span>
+			</div>
+			<!--阻止默认事件-->
+			<a v-on:click.prevent="alert" href="http://www.baidu.com">THe new step</a>
+		</div>
+
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
