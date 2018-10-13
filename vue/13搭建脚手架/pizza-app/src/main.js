@@ -56,3 +56,7 @@ new Vue({
 	router,
 	render: h => h(App)
 })
+
+// renderL function(h){
+// 	return h(App)
+// }
