@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>小工具</title>
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+			.border {
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+			}
+			
+			.yj {
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+				margin: 6px;
+				background-color: #555;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<p>边框</p>
+			<span class="border"></span>
+			<span class="border border-top-0"></span>
+			<span class="border border-right-0"></span>
+			<span class="border border-bottom-0"></span>
+			<span class="border border-left-0"></span>
+
+			<br />
+			<p>边框圆角</p>
+			<div class="yj rounded"></div>
+			<div class="yj rounded-top"></div>
+			<div class="yj rounded-right"></div>
+			<div class="yj rounded-bottom"></div>
+			<div class="yj rounded-left"></div>
+			<div class="yj rounded-circle"></div>
+			<div class="yj rounded-0"></div>
+
+			<br />
+			<p>浮动</p>
+			<span class="float-left">左浮动</span>
+			<span class="float-right">右浮动</span>
+			
+			<br />
+			<p>居中对齐</p>
+			<div class="mx-auto bg-info" style="width: 300px;">
+				你好，这是居中对齐
+			</div>
+			
+			<br />
+			<p>宽度设置</p>
+			<div class="w-25 bg-primary">
+				宽度25%
+			</div>
+			<div class="w-50 bg-primary mx-auto">
+				宽度50%
+			</div>
+			<div class="w-75 bg-primary">
+				宽度75%
+			</div>
+			
+			<br />
+			<p>高度设置</p>
+			
+
+		</div>
+
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<!--<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>-->
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

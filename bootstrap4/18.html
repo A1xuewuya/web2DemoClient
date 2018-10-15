@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>bootstrap</title>
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<h2>简单的折叠</h2>
+			<p>点击按钮内容会在显示和隐藏之间切换</p>
+			<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">折叠按钮</button>
+			<div id="demo" class="collapse">
+				你好世界，这是基本的本文消息 你好世界，这是基本的本文消息 你好世界，这是基本的本文消息
+			</div>
+
+			<hr />
+			<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo2">折叠按钮</button>
+			<div id="demo2" class="collapse show">
+				你好世界，这是基本的本文消息 你好世界，这是基本的本文消息 你好世界，这是基本的本文消息
+			</div>
+
+			<hr />
+			<p>手风琴实例</p>
+			<div class="row">
+				<div class="col-md-4">
+					<div id="accordion">
+						<div class="card">
+							<div class="card-header">
+								<a class="card-link" data-toggle="collapse" href="#collapseOne">
+									选项一
+								</a>
+							</div>
+							<div id="collapseOne" class="collapse show" data-parent="#accordion">
+								<div class="card-body">
+									<li class="list-group-item">选项</li>
+									<li class="list-group-item">选项</li>
+									<li class="list-group-item">选项</li>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header">
+								<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+									选项二
+								</a>
+							</div>
+							<div id="collapseTwo" class="collapse" data-parent="#accordion">
+								<div class="card-body">
+									#2 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header">
+								<a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+									选项三
+								</a>
+							</div>
+							<div id="collapseThree" class="collapse" data-parent="#accordion">
+								<div class="card-body">
+									#3 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

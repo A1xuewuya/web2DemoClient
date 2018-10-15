@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>bootstrap学习</title>
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<!--相应宽度的列-->
+			<div class="row">
+				<div class="col" style="background: orange;">
+					<p>你好世界</p>
+				</div>
+			</div>
+
+			<!--相应宽度的列  自动布局-->
+			<div class="row">
+				<div class="col" style="background-color: orangered;">
+					<p>.col</p>
+				</div>
+				<div class="col">
+					<p>.col</p>
+				</div>
+				<div class="col" style="background-color: orangered;">
+					<p>.col</p>
+				</div>
+				<div class="col">
+					<p>.col</p>
+				</div>
+				<div class="col">
+					<p>.col</p>
+				</div>
+			</div>
+
+			<!--等宽响应式列-->
+			<div class="row">
+				<div class="col-sm-3">
+					.col-sm-3
+				</div>
+				<div class="col-sm-3" style="background-color: orange;">
+					.col-sm-3
+				</div>
+				<div class="col-sm-3">
+					.col-sm-3
+				</div>
+				<div class="col-sm-3" style="background-color: orange;">
+					.col-sm-3
+				</div>
+			</div>
+
+			<!--不等宽响应式列-->
+			<div class="row">
+				<div class="col-md-4">
+					.col-sm-4
+				</div>
+				<div class="col-sm-8" style="background-color: orangered;">
+					.col-sm-8
+				</div>
+			</div>
+
+			<!--平板和桌面端-->
+			<!--<div class="container-fluid">-->
+			<div class="row">
+				<div class="col-sm-3 col-md-6" style="background-color: orangered;">
+					<p>你好</p>
+				</div>
+				<div class="col-sm-9 col-md-6" style="background-color: orange;">
+					<p>世界</p>
+				</div>
+			</div>
+			<!--</div>-->
+
+			<!--手机 平板 桌面 超大桌面-->
+			<div class="row">
+				<div class="col-sm-3 col-md-6 col-lg-4 col-xl-2" style="background-color: darkorange;">
+					<p>你好</p>
+				</div>
+				<div class="col-sm-9 col-md-6 col-lg-8 col-xl-10" style="background-color: orangered;">
+					<p>世界</p>
+				</div>
+			</div>
+
+			<!--偏移列-->
+			<div class="row">
+				<div class="col-md-4 bg-success">
+					.col-md-4
+				</div>
+				<div class="col-md-4 offset-md-4 bg-warning">
+					.col-md-4
+				</div>
+				<!--<div class="col-md-4 bg-success">
+					.col-md-4
+				</div>-->
+			</div>
+		</div>
+	</body>
+
+</html>
