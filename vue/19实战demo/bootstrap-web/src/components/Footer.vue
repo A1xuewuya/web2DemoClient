@@ -1,0 +1,6 @@
+<template>
+    <div class="jumbotron text-center" style="margin-bottom:0;">
+        <p>底部内容</p>
+    </div>
+
+</template>

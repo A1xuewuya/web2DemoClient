@@ -1,18 +1,25 @@
-// 官方插件
-import Vue from 'vue'
-import router from './router'
-import store from './store'
+import Vue from "vue";
+import router from "./router";
+import store from "./store";
 
-// 第三方插件
-import './plugins/element.js'
+import "./plugins/element.js";
+import Axios from "axios";
 
-// 导入组件
-import App from './App.vue'
+import App from "./App.vue";
 
-Vue.config.productionTip = false
+// 配置请求信息
+var $http = Axios.create({
+  baseURL: process.env.VUE_APP_BASE_API,
+  timeout: "80000", //请求超时时间
+  headers: {
+    "X-custom-header": "foobar" // header传值，例如 Authorization
+  }
+});
+Vue.prototype.$http = $http;
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount("#app");

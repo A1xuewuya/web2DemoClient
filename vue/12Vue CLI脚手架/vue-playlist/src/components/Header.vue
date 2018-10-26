@@ -28,7 +28,7 @@
 		beforeCreate: function() {
 			console.log("组件实例化之前执行的函数")
 		},
-		crreated: function() {
+		created: function() {
 			console.log("组件实例化完毕，但页面还未显示")
 		},
 		beforeMount: function() {
