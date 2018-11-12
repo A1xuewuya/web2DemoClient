@@ -16,6 +16,8 @@ export default {
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: 14px;
   color: #333;
+  min-width: 992px;
+  white-space: nowrap; 
   a {
     text-decoration: none;
   }

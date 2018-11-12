@@ -1,8 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-
 import _import from "@/utils/import";
-import Layout from "@/views/layout/Layout";
+const Layout = _import("layout/Layout");
 
 Vue.use(Router);
 
@@ -50,9 +49,14 @@ export const constantRouterMap = [
     ]
   },
   {
+    path: "/401",
+    component: _import("error/401"),
+    hidden: true
+  },
+  {
     path: "/404",
-    hidden: true,
-    component: _import("error/404")
+    component: _import("error/404"),
+    hidden: true
   },
   {
     path: "*",

@@ -1,5 +1,15 @@
 <template>
     <div>
         home
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
+        <p>你好</p>
     </div>
 </template>

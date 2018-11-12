@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-        <el-scrollbar style="height: 100%">
+        <el-scrollbar wrap-class="scrollbar-wrapper" style="height: 100%;">
             <el-menu
             background-color="#545c64" 
             text-color="#fff"
@@ -84,7 +84,9 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: #545c64;
+  .el-menu {
+    height: 100%;
+  }
 }
 </style>
 
