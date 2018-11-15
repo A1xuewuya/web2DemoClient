@@ -1,5 +1,4 @@
 import { login } from "@/api/login";
-import { getToken, setToken, removeToken } from "@/utils/auth";
 
 export default {
   state: {},
@@ -11,14 +10,13 @@ export default {
   actions: {
     // 管理员登录
     Login({ commit }, userInfo) {
-      console.log("---actions操作---");
+      console.log("---actions login操作---");
       return new Promise((resolve, reject) => {
         login(userInfo.username, userInfo.password)
           .then(res => {
             // setToken(res.token);
             // commit("SET_TOKEN", res.token);
             // resolve(res);
-            sessionStorage.setItem("ADMIN_TOKEN", res.token);
             resolve(res);
           })
           .catch(error => {

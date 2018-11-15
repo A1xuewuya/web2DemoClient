@@ -71,9 +71,6 @@ import Footer from "@/components/footer/index";
 import JSEncrypt from "jsencrypt/bin/jsencrypt.min.js";
 import { RSA_encrypt } from "@/utils/encrypt.js";
 import { login } from "@/api/login";
-// console.log(this.$store.state.count);
-// store.commit("increment");
-// console.log(store.state.count);
 
 export default {
   name: "login",
@@ -134,9 +131,9 @@ export default {
         if (valid) {
           console.log("---验证规则校验通过---");
           if (this.btnSubmitState == false) {
+            console.log("---socket开始登录---");
             this.btnSubmitState = true;
             this.btnLoading = true;
-            console.log("---socket开始登录---");
             let encrypt = new JSEncrypt();
             let encrypt_data = {
               username: this.loginForm.username,
@@ -145,20 +142,25 @@ export default {
             let public_key =
               "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFEHPYIJHlzpPxibqSXQQ//iNQ5jouawoF+9FRuH1vgRAeBr6guLz61U+a3rjQu4tvBwuaVocbTh3ZCTYtrOEelTmTLa5SCOLBNx5NF1DXz062aP2A7sqskSHGTujagcs9eHvH1T4dpYwyEXaahHokuXzH1jmTFzkq3TT5pPu6hQIDAQAB";
             let encrypted_data = RSA_encrypt(encrypt, encrypt_data, public_key);
-            // console.log(encrypted_data);
+            // store操作
             this.$store
               .dispatch("Login", encrypted_data)
               .then(res => {
+                // ---验证通过---
                 this.btnLoading = false;
                 this.btnSubmitState = false;
                 this.$router.push({ path: this.redirect || "/" });
               })
               .catch(error => {
+                // 验证失败
                 this.btnLoading = false;
                 this.btnSubmitState = false;
+                console.log(error);
               });
           }
         } else {
+          // 错误的提交规则
+          console.log("error submit!");
           return false;
         }
       });

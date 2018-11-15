@@ -27,26 +27,38 @@ service.interceptors.request.use(
 // response 拦截器
 service.interceptors.response.use(
   response => {
-    const res = response.data;
-    if (res.ret !== 0) {
-      // 返回其他状态码处理
-      if (res.ret === 4001) {
+    const resp = response.data;
+    const ret = resp.ret;
+    if (0 === ret) {
+      // 如果操作成功，返回码为0，返回所有结果
+      return resp;
+    } else {
+      // 做其他状态码处理
+      if (4001 === ret) {
         Message({
           message: "用户名或密码错误！",
           type: "error"
         });
+      } else {
+        Message({
+          message: "未知错误，请稍后再试",
+          type: "error",
+          duration: 5 * 1000
+        });
       }
-      //   Message({
-      //     message: "未知错误，请联系管理员",
-      //     type: "error",
-      //     duration: 5 * 1000
-      //   });
-      return Promise.reject("error");
-    } else {
-      return res;
+      console.log("---response状态码之外错误---");
+      return Promise.reject("---error---");
     }
   },
-  error => {}
+  error => {
+    Message({
+      message: "操作超时！",
+      type: "error",
+      duration: 5 * 1000
+    });
+    console.log(error);
+    return Promise.reject("---error---");
+  }
 );
 
 export default service;

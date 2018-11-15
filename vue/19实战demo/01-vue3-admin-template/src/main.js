@@ -4,7 +4,6 @@ import router from "./router";
 import store from "./store/index";
 // 导入第三方依赖
 import "./plugins/element.js";
-import "./plugins/vue-seamless-scroll.js";
 import "normalize.css";
 // 导入视图组件
 import App from "./App.vue";
