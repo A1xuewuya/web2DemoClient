@@ -12,7 +12,7 @@ export default {
   setItem(key, value) {
     // 判断是字符串还是i对象
     if (typeof value == "string") {
-      sessionStorage.setItem(key, item);
+      sessionStorage.setItem(key, value);
     } else {
       let item = JSON.stringify(value);
       sessionStorage.setItem(key, item);

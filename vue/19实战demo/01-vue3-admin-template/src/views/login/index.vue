@@ -34,7 +34,7 @@
                 <el-col :span="12">
                 <div class="login-slogan-wrapper">
                     <p>无人超市</p>
-                    <p>让你离未来更近一点</p>
+                    <p>让您离未来更近一点</p>
                     <span>Intelligent Supermarket Management System.</span>
                 </div>
                 </el-col>
@@ -147,9 +147,10 @@ export default {
               .dispatch("Login", encrypted_data)
               .then(res => {
                 // ---验证通过---
+                console.log(res);
                 this.btnLoading = false;
                 this.btnSubmitState = false;
-                this.$router.push({ path: this.redirect || "/" });
+                this.$router.push({ path: this.redirect || "/home" });
               })
               .catch(error => {
                 // 验证失败

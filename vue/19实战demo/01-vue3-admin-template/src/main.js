@@ -5,6 +5,7 @@ import store from "./store/index";
 // 导入第三方依赖
 import "./plugins/element.js";
 import "normalize.css";
+import "./permission.js";
 // 导入视图组件
 import App from "./App.vue";
 // 导入自定义初始化方法

@@ -17,27 +17,9 @@ export const constantRouterMap = [
     component: _import("login/index")
   },
   {
-    path: "/pizza",
-    name: "pizza",
-    component: _import("pizza/index"),
-    redirect: "/pizza/menu",
-    children: [
-      {
-        path: "/pizza/menu",
-        name: "menu",
-        component: _import("pizza/menu")
-      },
-      {
-        path: "/pizza/home",
-        name: "home",
-        component: _import("pizza/home")
-      },
-      {
-        path: "/pizza/admin",
-        name: "admin",
-        component: _import("pizza/admin")
-      }
-    ]
+    path: "/home",
+    name: "home",
+    component: _import("home/index")
   },
   {
     path: "/401",
@@ -63,3 +45,29 @@ export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 });
+
+/*
+{
+    path: "/pizza",
+    name: "pizza",
+    component: _import("pizza/index"),
+    redirect: "/pizza/menu",
+    children: [
+      {
+        path: "/pizza/menu",
+        name: "menu",
+        component: _import("pizza/menu")
+      },
+      {
+        path: "/pizza/home",
+        name: "home",
+        component: _import("pizza/home")
+      },
+      {
+        path: "/pizza/admin",
+        name: "admin",
+        component: _import("pizza/admin")
+      }
+    ]
+  },
+  */

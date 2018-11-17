@@ -47,7 +47,7 @@ service.interceptors.response.use(
         });
       }
       console.log("---response状态码之外错误---");
-      return Promise.reject("---error---");
+      return Promise.reject("未知错误，请稍后再试");
     }
   },
   error => {
