@@ -4,7 +4,9 @@ import { setToken, removeToken } from "@/utils/auth";
 export default {
   state: {
     token: "",
-    roles: []
+    roles: [],
+    name: "",
+    avatar: ""
   },
   mutations: {
     SET_TOKEN: (state, token) => {
@@ -12,6 +14,12 @@ export default {
     },
     SET_ROLES: (state, roles) => {
       state.roles = roles;
+    },
+    SET_NAME: (state, name) => {
+      state.name = name;
+    },
+    SET_AVATAR: (state, avatar) => {
+      state.avatar = avatar;
     }
   },
   actions: {
@@ -35,13 +43,21 @@ export default {
     GetInfo({ commit, state }) {
       return new Promise((resolve, reject) => {
         getInfo(state.token)
-          .then(response => {
-            const data = response.data;
+          .then(resp => {
+            // resp为request拦截器response响应的data数据部分
+            // console.log(resp);
+            const data = resp.data;
+            // 验证返回的roles是否为一个非空数组
             if (data.roles && data.roles.length > 0) {
               commit("SET_ROLES", data.roles);
+              // 设置头像和昵称
+              commit("SET_NAME", data.name);
+              commit("SET_AVATAR", data.avatar);
             } else {
               reject("getInfo: roles must be a non-null Array!!!");
             }
+            // promise异步返回
+            resolve(resp);
           })
           .catch(error => {
             reject(error);
